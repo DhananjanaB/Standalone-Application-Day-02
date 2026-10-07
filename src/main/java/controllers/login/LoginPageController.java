@@ -1,4 +1,4 @@
-package controllers;
+package controllers.login;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class LoginPageController {
 
+    LoginController loginController = new LoginController();
+
     @FXML
     private Button login;
 
@@ -24,11 +26,8 @@ public class LoginPageController {
 
     @FXML
     void LoginOnaction(ActionEvent event) {
-        String name = userName.getText();
-        String password = txtPassword.getText();
-        boolean b = checkUserNameandPassword(name,password);
 
-        if(b){
+        if(loginController.checkUserNameandPassword(userName.getText(),txtPassword.getText())){
             Stage stage = new Stage();
             try{
                 stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
@@ -41,11 +40,6 @@ public class LoginPageController {
         }
     }
 
-    private boolean checkUserNameandPassword(String name, String password) {
-        if(name.equals("Tharu") && password.equals("1234")){
-            return true;
-        }
-        return false;
-    }
+
 
 }

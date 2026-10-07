@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="538.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginPageController">
+<AnchorPane prefHeight="538.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.login.LoginPageController">
    <children>
       <Label alignment="TOP_CENTER" graphicTextGap="8.0" layoutX="221.0" layoutY="44.0" prefHeight="38.0" prefWidth="158.0" text="Login Page">
          <font>
